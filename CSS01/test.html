@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        p:hover{
+            font-weight: 1000;
+        }
+    </style>
+</head>
+<body>
+    <p style="width: 800px; height: 600px; margin: auto;background-color: #333; color:aliceblue; padding: 20px; border-radius: 30px;
+    box-shadow: brown 5px 5px 10px;">
+        #------------------------mysql config----------------------------
+datasource.driverClass=com.mysql.jdbc.Driver
+datasource.jdbcUrl=jdbc:mysql://10.4.45.105:3306/report?characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+datasource.user=root
+datasource.password=root
+datasource.initialSize=2
+datasource.maxActive=150
+datasource.maxIdle=5
+datasource.maxWait=5000
+datasource.validationQuery=select 1
+hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+hibernate.showSql=false
+quartz.delegate=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+
+#------------------------oracle config----------------------------
+#datasource.driverClass=oracle.jdbc.driver.OracleDriver
+#datasource.jdbcUrl=jdbc:oracle:thin:@10.4.53.89:1521:orcl
+#datasource.user=report_ci
+#datasource.password=report_ci
+#datasource.initialSize=2
+#datasource.maxActive=150
+#datasource.maxIdle=5
+#datasource.maxWait=5000
+#datasource.validationQuery=select 1 from dual
+#hibernate.dialect=org.hibernate.dialect.OracleDialect
+#hibernate.showSql=false
+#quartz.delegate=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+
+
+#------------------------sql server config----------------------------
+#datasource.driverClass=com.microsoft.sqlserver.jdbc.SQLServerDriver
+#datasource.jdbcUrl=jdbc:sqlserver://10.4.53.151:1433;DatabaseName=report_test
+#datasource.user=sa
+#datasource.password=aaa123+-*/
+#datasource.initialSize=2
+#datasource.maxActive=150
+#datasource.maxIdle=5
+#datasource.maxWait=5000
+#datasource.validationQuery=select 1
+#hibernate.dialect=org.hibernate.dialect.OracleDialect
+#hibernate.showSql=false
+#quartz.delegate=org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+注意，如果下载的是专业版，数据源配置文件是 WEB-INF/conf/unieap/connection/connection-config.xml，提供两种常用的 连接方式：JDBC c3p0 连接方式和应用服务器 JNDI 连接池方式。 对应名称为UNIEAP。
+
+<c3p0-connection name="UNIEAP">
+    <url>jdbc:oracle:thin:@10.4.53.89:1521:orcl</url>
+    <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+    <user>report_ci</user>
+    <password>report_ci</password>
+    <min-pool-size>3</min-pool-size>
+    <max-pool-size>15</max-pool-size>
+    <checkout-timeout>0</checkout-timeout>
+    <max-idle-time>7200</max-idle-time>
+    <idle-connection-test-period>0</idle-connection-test-period>
+    <test-connection-on-checkin>false</test-connection-on-checkin>
+    <test-connection-on-checkout>false</test-connection-on-checkout>
+    <max-statements>0</max-statements>
+    <max-statements-per-connection>0</max-statements-per-connection>
+    <acquire-increment>3</acquire-increment>
+</c3p0-connection>
+
+<jndi-connection name="jndi">
+  <jndi-name>java:comp/env/UNIEAP</jndi-name>
+</jndi-connection>
+    </p>
+</body>
+</html>
