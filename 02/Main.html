@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS样式表</title>
+    <link type="text/css" rel="stylesheet" href="./Main.css">
+    <style>
+        .Inset{
+            background-color: darkcyan;
+            margin: auto; 
+            width: 600px; 
+            height: 200px; 
+            font-size: 28px; 
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <p style="background-color: blue; 
+    margin: auto; 
+    width: 500px; 
+    height: 200px; 
+    font-size: 28px; 
+    color: cornsilk;">1
+        CSS内联样式表:style写在标签里面
+    </p>
+
+    <div class="Inset">
+        CSS内嵌样式表：style写在<head>标签里
+    </div>
+
+    <div class="OutCSS">
+        CSS外部样式表：CSS单独在.cs文件中写，在Html head标签中引用
+    </div>
+</body>
+</html>
