@@ -1,0 +1,13 @@
+ body {
+     /*
+     background-color
+    background-position
+    background-size
+    background-repeat
+    background-origin
+    background-clip
+    background-attachment
+    background-image
+    */
+    background: url("./RS/壁纸/1.jpg") center/cover no-repeat fixed;
+ }

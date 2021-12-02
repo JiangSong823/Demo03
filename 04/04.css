@@ -1,0 +1,45 @@
+body{
+    height: 3000px;
+    background-image:url("./RSS/Img01/01.jpeg");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    /* background-position: center top; */
+}
+
+div{
+    width: 800px;
+    height: 100px;
+    margin: auto;
+    font-size: 72px;
+    float: left;
+}
+
+/* 
+div>.d1 {
+    
+    float: left;
+    background-color: #F50;
+}
+div>.d2 {
+    
+    float: left;
+    background-color: #05F;
+}
+div>.d3 {
+    
+    float: left;
+    background-color: #0F5;
+}
+
+.d1 {
+    float: left;
+    background-color: #0FF;
+} 
+.d2 {
+    float: left;
+    background-color: #0AF;
+}
+.d3 {
+    float: left;
+    background-color: #f00;
+} */
